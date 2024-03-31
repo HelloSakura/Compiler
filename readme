@@ -1,0 +1,4 @@
+Lexer.c
+bug 1:
+在识别标识符和16进制0xab时，对于x64或xab这种，应该按照标识符处理，因为C规定16进制表示以0x开头，但在实现时
+x68这种安装16进制数生成了number token而非identifier token
